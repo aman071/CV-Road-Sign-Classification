@@ -58,7 +58,10 @@ def load_data(data_dir):
     be a list of integer labels, representing the categories for each of the
     corresponding `images`.
     """
-    raise NotImplementedError
+    
+
+    im = cv2.imread('kolala.jpeg')
+    img = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)   # BGR -> RGB
 
 
 def get_model():
