@@ -59,9 +59,13 @@ def load_data(data_dir):
     corresponding `images`.
     """
     
+    for filename in os.listdir(data_dir):
+        if filename is not None:
+            img = cv2.imread(os.path.join(data_dir,filename))
+            # print(type(img))
 
-    im = cv2.imread('kolala.jpeg')
-    img = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)   # BGR -> RGB
+        else:
+            print(filename)
 
 
 def get_model():
